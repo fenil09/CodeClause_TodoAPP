@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/checkbox.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/nextcheckbox.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/roundactivity.xml" value="0.15" />
         <entry key="app/src/main/res/drawable/roundbutton.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.15128205128205127" />
+        <entry key="app/src/main/res/drawable/roundimage.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_create_task.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/cardviewdesign.xml" value="0.22" />
       </map>
     </option>
   </component>

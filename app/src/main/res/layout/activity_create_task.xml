@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".createTask">
+    <ImageView
+            android:layout_width="336dp"
+            android:layout_height="251dp" app:srcCompat="@drawable/taskscreen" android:id="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.026"
+            app:layout_constraintHorizontal_bias="0.491"/>
+    <TextView
+            android:text="Create New Tasks...."
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.362"
+            app:layout_constraintVertical_bias="0.381"/>
+    <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="335dp"
+            android:layout_height="77dp"
+            android:inputType="textMultiLine"
+            android:hint="Enter your task"
+            android:textStyle="bold|italic"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:paddingLeft="88dp"
+            android:textSize="22sp"
+            android:background="@drawable/roundimage"
+            android:ems="10"
+            android:id="@+id/edit1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.529"/>
+    <TextView
+            android:text="please select priority for your task...."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView4"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintVertical_bias="0.674"/>
+    <CheckBox
+            android:text="High"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="95dp"
+            android:button="@drawable/checkbox"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:layout_height="52dp" android:id="@+id/checkBox2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.797"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.151"/>
+    <CheckBox
+            android:text="Low"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="95dp"
+            android:button="@drawable/nextcheckbox"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:layout_height="52dp" android:id="@+id/checkBox3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.797"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.825"/>
+    <ImageView
+            android:layout_width="59dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/clipboard" android:id="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/edit1"
+            app:layout_constraintStart_toStartOf="@+id/edit1" app:layout_constraintTop_toTopOf="@+id/edit1"
+            app:layout_constraintBottom_toBottomOf="@+id/edit1" app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintVertical_bias="0.516"/>
+
+    <com.ncorti.slidetoact.SlideToActView android:layout_width="301dp" android:layout_height="66dp"
+                                          app:layout_constraintTop_toTopOf="parent"
+                                          app:layout_constraintBottom_toBottomOf="parent"
+                                          app:inner_color="@color/black"
+                                          app:text="Swipe to Save"
+                                          app:text_style="bold"
+                                          app:animate_completion="true"
+                                          app:text_size="17sp"
+                                          app:slider_locked="false"
+                                          android:id="@+id/swipe1"
+                                          app:layout_constraintEnd_toEndOf="parent"
+                                          app:layout_constraintStart_toStartOf="parent"
+                                          app:layout_constraintHorizontal_bias="0.434"
+                                          app:layout_constraintVertical_bias="0.949">
+
+    </com.ncorti.slidetoact.SlideToActView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun gotohome(){
-        val intent:Intent=Intent(this,Home::class.java)
+        val intent:Intent=Intent(this,createTask::class.java)
         startActivity(intent)
 
         overridePendingTransition(R.anim.enteractivity,R.anim.enteractivity)
