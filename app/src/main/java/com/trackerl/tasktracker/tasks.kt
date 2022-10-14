@@ -1,7 +1,6 @@
 package com.trackerl.tasktracker
 
-data class datatasks(
-
+data class datatask(
     val datauser:String=" ",
     val priority:String=" "
 )

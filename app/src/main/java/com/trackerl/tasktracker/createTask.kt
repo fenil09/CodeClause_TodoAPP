@@ -73,7 +73,7 @@ class createTask : AppCompatActivity(),SlideToActView.OnSlideCompleteListener{
         val value=data.text.toString()
         dataobject= datatasks(value,checkpriority)
 
-        if(dataobject.tasks.isEmpty() || dataobject.priority.isEmpty()){
+        if(dataobject.datauser.isEmpty() || dataobject.priority.isEmpty()){
            val alert:AlertDialog.Builder=AlertDialog.Builder(this)
             alert.setMessage("please enter your task and also remember to select the priority of your task")
             alert.setPositiveButton("okay", DialogInterface.OnClickListener { dialog, which ->
@@ -101,6 +101,9 @@ class createTask : AppCompatActivity(),SlideToActView.OnSlideCompleteListener{
                 high.isChecked=false
                 low.isChecked=false
                 Toast.makeText(this,"task added successfully",Toast.LENGTH_LONG).show()
+                val intent:Intent=Intent(this,Home::class.java)
+                startActivity(intent)
+                finish()
             }
             else{
                 Toast.makeText(this,"sorry some server error occured",Toast.LENGTH_LONG).show()
