@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="See your Tasks" android:id="@+id/viewtasks" android:visible="true" android:enabled="true"
+
+    />
+    <item android:title="Check your Progress" android:id="@+id/progress" android:visible="true"
+          android:checkable="false" android:enabled="true"/>
+</menu>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/roundactivity"
+        tools:context=".Progress">
+
+    <ImageView
+            android:layout_width="354dp"
+            android:layout_height="284dp" app:srcCompat="@drawable/tracker" android:id="@+id/imageView7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.063"
+            app:layout_constraintHorizontal_bias="0.589"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="362dp"
+            android:layout_height="398dp"
+            android:background="@drawable/roundimage"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.964" app:layout_constraintHorizontal_bias="0.516">
+
+        <TextView
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:layout_width="66dp"
+                android:layout_height="59dp" android:id="@+id/textView10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.942"
+                app:layout_constraintVertical_bias="0.439"/>
+        <TextView
+                android:text="Total Tasks"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:textColor="@color/white"
+                android:layout_width="259dp"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"
+                android:layout_height="60dp" android:id="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.155" app:layout_constraintVertical_bias="0.192"/>
+        <TextView
+                android:text="0"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:layout_width="66dp"
+                android:layout_height="59dp" android:id="@+id/textView8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.945"
+                app:layout_constraintVertical_bias="0.191"/>
+        <TextView
+                android:text="Task Completed "
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content" android:id="@+id/textView9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.386"
+                app:layout_constraintVertical_bias="0.424"/>
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="293dp"
+                android:layout_height="62dp"
+                android:background="@drawable/roundprogressbar"
+                android:id="@+id/progressBar2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintVertical_bias="0.785"/>
+        <TextView
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.934"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

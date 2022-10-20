@@ -1,44 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="350dp"
                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    android:background="@color/white"
                                    app:cardBackgroundColor="@color/black"
                                    app:cardCornerRadius="15dp"
                                    app:cardElevation="12dp"
+                                   android:paddingLeft="20dp"
+                                   android:layout_gravity="center"
                                    android:layout_marginTop="20dp"
-                                   android:layout_height="wrap_content">
-
+                                   android:layout_marginBottom="30dp"
+                                   android:layout_height="110dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-                                                       android:layout_height="63dp"
-                                                       android:layout_marginTop="120dp"
-                                                       android:padding="12dp"
-    >
-        <TextView android:layout_width="141dp" android:layout_height="47dp"
-                  android:text="hello world"
-                  android:textColor="@color/white"
-                  android:textSize="25dp"
-                  app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintHorizontal_bias="1.0" android:id="@+id/textView5"
-        />
-        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  android:id="@+id/checkbox1"
-                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-                  app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.017"
-                  app:layout_constraintVertical_bias="0.625"/>
-        <TextView
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:layout_width="128dp"
-                android:layout_height="33dp" android:id="@+id/textView7"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.586"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.306"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                                                       android:layout_height="match_parent">
 
+
+        <TextView android:layout_width="177dp" android:layout_height="60dp"
+                  android:text="hello"
+                  android:textColor="@color/white"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:textStyle="bold|italic"
+                  android:textSize="20sp"
+                  android:paddingLeft="10dp"
+                  app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintVertical_bias="0.74" android:id="@+id/textView5"
+                  app:layout_constraintHorizontal_bias="0.502"/>
+        <CheckBox
+                android:layout_width="50dp"
+                android:layout_height="40dp" android:id="@+id/checkBox5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.062" app:layout_constraintVertical_bias="0.532"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     lateinit var mauth:FirebaseAuth
     var uid:String=""
+    lateinit var reff:DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         mauth= FirebaseAuth.getInstance()
         Thread(Runnable {
             authenticationwithfirebase()
+
         }).start()
 
 
@@ -42,7 +46,25 @@ class MainActivity : AppCompatActivity() {
 
             if(it.isSuccessful){
                 uid=mauth.currentUser?.uid.toString()
+                sendcountervaluetofirebase()
+                sendcompletecountervaluetofirebase()
             }
         }
+    }
+
+    fun sendcountervaluetofirebase(){
+        reff=FirebaseDatabase.getInstance().reference.child("datacounter").child(mauth.uid.toString())
+         val data:Int=0
+        reff.setValue(data)
+    }
+
+
+    fun sendcompletecountervaluetofirebase(){
+
+        reff=FirebaseDatabase.getInstance().reference.child("completetaskcounter").child(mauth.uid.toString())
+        val data:Int=0
+        reff.setValue(data)
+
+
     }
 }
