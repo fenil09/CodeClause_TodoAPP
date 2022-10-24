@@ -6,22 +6,13 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Adapter
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
-import value
-import kotlin.properties.Delegates
 
-class Home : AppCompatActivity() ,cardadapter.onitemclickedlistner{
+class Home : AppCompatActivity(){
 
 
     lateinit var mauth:FirebaseAuth
@@ -31,6 +22,7 @@ class Home : AppCompatActivity() ,cardadapter.onitemclickedlistner{
      var context:Context=this
     var itemposition:Int=0
     var sharedname:String="mypref"
+    lateinit var reff2:DatabaseReference
     var key:String="counterkey"
     lateinit var preff:SharedPreferences
     var name:String="fenil"
@@ -57,7 +49,7 @@ class Home : AppCompatActivity() ,cardadapter.onitemclickedlistner{
     }
 
     fun getuserdata(){
-        val adapter=cardadapter(task,this)
+        val adapter=cardadapter(task)
         reff=FirebaseDatabase.getInstance().getReference("usertasks").child(mauth.uid.toString())
        reff.addValueEventListener(object:ValueEventListener{
            @SuppressLint("NotifyDataSetChanged")
@@ -69,6 +61,7 @@ class Home : AppCompatActivity() ,cardadapter.onitemclickedlistner{
                        val userdata=usersnapshot.getValue(datatasks::class.java)
                        if (userdata != null) {
                            task.add(userdata)
+
                        }
 
                    }
@@ -86,22 +79,8 @@ class Home : AppCompatActivity() ,cardadapter.onitemclickedlistner{
 
        })
 
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    override fun onitemclicked(postion: Int) {
-
-        pref=getSharedPreferences(sharedname, MODE_PRIVATE)
-
-        Toast.makeText(this,"$postion is selectec",Toast.LENGTH_LONG).show()
-
-
 
     }
-
-
-
-
 
 
 }

@@ -70,7 +70,6 @@ class createTask : AppCompatActivity(),SlideToActView.OnSlideCompleteListener{
 
 
 
-
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.options,menu)
@@ -109,7 +108,7 @@ class createTask : AppCompatActivity(),SlideToActView.OnSlideCompleteListener{
     fun controlcheckbox() {
 
         high.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
-            checkpriority="Yes"
+            checkpriority="High Priority"
         low.isChecked=false
         })
 
@@ -118,7 +117,7 @@ class createTask : AppCompatActivity(),SlideToActView.OnSlideCompleteListener{
             if(low.isChecked){
                 high.isChecked=false
                 low.isChecked=true
-                checkpriority="No"
+                checkpriority="Low Priority"
             }
         })
     }
@@ -148,7 +147,8 @@ class createTask : AppCompatActivity(),SlideToActView.OnSlideCompleteListener{
         val value=data.text.toString()
         dataobject= datatasks(value,checkpriority)
         reff=FirebaseDatabase.getInstance().reference
-        reff.child("usertasks").child(mauth.uid.toString()).push().setValue(dataobject).addOnCompleteListener(this){
+        reff.child("usertasks").child(mauth.uid.toString()).push()
+            .setValue(dataobject).addOnCompleteListener(this){
 
             if(it.isSuccessful){
                 data.setText("")
